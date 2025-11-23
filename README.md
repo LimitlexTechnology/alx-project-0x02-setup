@@ -1,4 +1,4 @@
-# ALX Next.js Project - 0x02
+#  Next.js Project Setup and Basics.
 
 This project is a simple web application built with Next.js, using TypeScript, Tailwind CSS, and various reusable components. The application demonstrates basic routing, dynamic data fetching, and component reusability.
 
