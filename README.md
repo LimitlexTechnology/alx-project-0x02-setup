@@ -50,7 +50,7 @@ To run the project locally, follow these steps:
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/tladikholofelo/alx-project-0x02-setup.git
+git clone https://github.com/LimitlexTechnology/alx-project-0x02-setup.git
 cd alx-project-0x02-setup
 ```
 
