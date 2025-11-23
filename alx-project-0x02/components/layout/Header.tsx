@@ -1,11 +1,20 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header style={{ padding: '1rem', background: '#f5f5f5', borderBottom: '1px solid #ddd' }}>
-      <h1 style={{ margin: 0, fontSize: '2rem' }}>My Project</h1>
+    <header className="bg-gray-100 p-4">
+      <nav className="flex justify-center gap-6">
+        <Link href="/home" className="text-blue-500 hover:underline">
+          Home
+        </Link>
+        <Link href="/about" className="text-blue-500 hover:underline">
+          About
+        </Link>
+      </nav>
     </header>
   );
 };
 
 export default Header;
+
