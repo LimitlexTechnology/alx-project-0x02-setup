@@ -1,12 +1,11 @@
 import React from 'react';
-import Card from '../components/common/card';
 
 const Home: React.FC = () => {
 	return (
-		<div>
-			<h1>Home Page</h1>
-			<Card title="Welcome" content="This is the home page card." />
-		</div>
+		<main style={{ padding: '2rem' }}>
+			<h1>Welcome to the Home Page</h1>
+			<p>This is the homepage of your ALX Project.</p>
+		</main>
 	);
 };
 
