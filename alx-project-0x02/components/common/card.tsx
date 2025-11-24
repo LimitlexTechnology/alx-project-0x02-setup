@@ -1,22 +1,13 @@
-import React from 'react';
+import React from "react";
+import { CardProps } from "../../interfaces";
 
-interface CardProps {
-  title: string;
-  content: React.ReactNode;
-}
-
-const Card: React.FC<CardProps> = ({ title, content }) => (
-  <div style={{
-    border: '1px solid #ddd',
-    borderRadius: '8px',
-    padding: '16px',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
-    background: '#fff',
-    maxWidth: '400px'
-  }}>
-    <h2 style={{ margin: '0 0 12px 0', fontSize: '1.25rem' }}>{title}</h2>
-    <div>{content}</div>
-  </div>
-);
+const Card: React.FC<CardProps> = ({ title, content }) => {
+  return (
+    <div className="border rounded-lg p-4 shadow-md bg-white">
+      <h2 className="text-xl font-semibold mb-2">{title}</h2>
+      <p className="text-gray-700">{content}</p>
+    </div>
+  );
+};
 
 export default Card;
