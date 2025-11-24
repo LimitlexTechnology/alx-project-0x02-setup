@@ -1,19 +1,23 @@
 import React from 'react';
-import Card from '../components/common/Card';
+import Card from '../components/common/card';
 
-const Home: React.FC = () => {
-  return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Home Page</h1>
-      <p>Welcome to the Home page of our Next.js app!</p>
+const HomePage: React.FC = () => {
+	const cards = [
+		{ title: 'Getting Started', content: 'Learn the basics of this Next.js + Tailwind app.' },
+		{ title: 'Components', content: 'Reusable UI components live under `components/`.' },
+		{ title: 'Styling', content: 'Global styles and Tailwind are configured in `styles/`.' },
+	];
 
-      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', marginTop: '30px' }}>
-        <Card title="Card 1" content="This is the content for card 1." />
-        <Card title="Card 2" content="This is the content for card 2." />
-        <Card title="Card 3" content="This is the content for card 3." />
-      </div>
-    </div>
-  );
-};
+	return (
+		<main className="min-h-screen flex flex-col items-center gap-6 p-8 bg-gray-50">
+			<h1 className="text-2xl font-bold">Home</h1>
+			<section className="flex flex-wrap justify-center gap-6">
+				{cards.map((c) => (
+					<Card key={c.title} title={c.title} content={c.content} />
+				))}
+			</section>
+		</main>
+		);
+	};
 
-export default Home;
+export default HomePage;

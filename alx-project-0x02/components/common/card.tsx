@@ -1,22 +1,16 @@
-// components/common/Card.tsx
 import React from 'react';
-import { CardProps } from '../../interfaces';
+
+export interface CardProps {
+  title: string;
+  content: string;
+}
 
 const Card: React.FC<CardProps> = ({ title, content }) => {
   return (
-    <div
-      style={{
-        border: '1px solid #ccc',
-        borderRadius: '8px',
-        padding: '20px',
-        margin: '10px',
-        maxWidth: '300px',
-        boxShadow: '2px 2px 10px rgba(0,0,0,0.1)',
-      }}
-    >
-      <h2 style={{ marginBottom: '10px' }}>{title}</h2>
-      <p>{content}</p>
-    </div>
+    <article className="border rounded-lg p-4 shadow-sm max-w-xs bg-white">
+      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-sm text-gray-700">{content}</p>
+    </article>
   );
 };
 
