@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '@/components/layout/Header';
 import Card from '@/components/common/Card';
 import PostModal from '@/components/common/PostModal';
 
@@ -15,7 +16,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <main className="p-8 space-y-6">
+    <>
+      <Header />
+      <main className="p-8 space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">Welcome to the Home Page</h1>
         <button
@@ -36,6 +39,7 @@ const Home: React.FC = () => {
         onSubmit={handleSubmit}
       />
     </main>
+    </>
   );
 };
 
